@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dice" class="soundsystem.Dice">
+        <constructor-arg value="6" />
+    </bean>
+
+    <bean id="player1" class="soundsystem.Player">
+        <property name="dice" ref="dice" />
+        <property name="name" value="player1" />
+    </bean>
+    <bean id="player2" class="soundsystem.Player">
+        <property name="dice" ref="dice" />
+        <property name="name" value="player2" />
+    </bean>
+    <bean id="player3" class="soundsystem.Player">
+        <property name="dice" ref="dice" />
+        <property name="name" value="player3" />
+    </bean>
+
+    <bean id="game" class="soundsystem.Game">
+        <property name="playerList">
+            <list>
+                <ref bean="player1" />
+                <ref bean="player2" />
+                <ref bean="player3" />
+            </list>
+        </property>
+    </bean>
+
+</beans>
+
