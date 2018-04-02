@@ -7,13 +7,29 @@
     <constructor-arg value="prototype"/>
     <property name="name" value="urstory" />
     <property name="count" value="100" />
+  </bean>
 
-  </bean><bean id="bean2" class="soundsystem.MyBean">
-  <constructor-arg value="singleton"/>
+  <bean id="bean2" class="soundsystem.MyBean">
+    <constructor-arg value="singleton"/>
     <property name="name" value="urstory" />
     <property name="count" value="100" />
   </bean>
 
+  <bean id="bean3" class="soundsystem.MyBean">
+    <constructor-arg value="urstroy2" />
+    <constructor-arg value="200" />
+  </bean>
+
+  <bean id="bean4" class="soundsystem.MyBean">
+    <constructor-arg>
+      <map>
+        <entry key="1" value="1" />
+        <entry key="2" value="2" />
+        <entry key="3" value="3" />
+        <entry key="4" value="4" />
+      </map>
+    </constructor-arg>
+  </bean>
 
 </beans>
 

@@ -14,7 +14,7 @@
         p:artist="The Beatles"
         p:tracks-ref="trackList" />
 
-  <util:list id="trackList">  
+  <util:list id="trackList">  <!-- 컬렉션 미리 생성 -->
     <value>Sgt. Pepper's Lonely Hearts Club Band</value>
     <value>With a Little Help from My Friends</value>
     <value>Lucy in the Sky with Diamonds</value>
