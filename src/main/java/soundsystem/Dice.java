@@ -8,6 +8,7 @@ public class Dice {
     private Random random;
     
     public Dice(int face) {
+        System.out.println("Dice 생성자");
         this.face = face;
         this.random = new Random();
     }

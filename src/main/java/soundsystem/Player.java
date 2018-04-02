@@ -5,7 +5,12 @@ public class Player {
     private Dice dice;
     private String name;
     
+    public Player() {
+        System.out.println("Player 생성자");
+    }
+    
     public void setName(String name) {
+        System.out.println("Player.setName()");
         this.name = name;
     }
     
@@ -14,6 +19,7 @@ public class Player {
     }
     
     public void setDice(Dice dice) {
+        System.out.println("Player.setDice()");
         this.dice = dice;
     }
     

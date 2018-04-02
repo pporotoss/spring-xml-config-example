@@ -3,9 +3,9 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="dice" class="soundsystem.Dice">
+    <!--<bean id="dice" class="soundsystem.Dice">
         <constructor-arg value="6" />
-    </bean>
+    </bean>-->
 
     <bean id="player1" class="soundsystem.Player">
         <property name="dice" ref="dice" />
@@ -28,6 +28,10 @@
                 <ref bean="player3" />
             </list>
         </property>
+    </bean>
+
+    <bean id="dice" class="soundsystem.Dice">
+        <constructor-arg value="6" />
     </bean>
 
 </beans>
