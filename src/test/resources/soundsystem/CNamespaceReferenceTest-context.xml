@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  xmlns="url주소" ==> 기본 네임스페이스. 태그에 이름을 생략해도 된다.
+  xmlns:이름="url주소" ==> 태그마다 이름을 붙여야 된다.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+  <bean id="compactDisc" class="soundsystem.SgtPeppers" />
+        
+  <bean id="cdPlayer" class="soundsystem.CDPlayer"
+        c:cd-ref="compactDisc" />
+
+</beans>
+
